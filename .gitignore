@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+ssh-keygen -t ed25519 -C "mitarthvaid@gmail.com"
+cat ~/.ssh/id_ed25519.pub  # copy this and paste into GitHub → Settings → SSH Keys
