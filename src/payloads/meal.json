@@ -1,0 +1,124 @@
+{
+  "food": "Bananas, overripe, raw",
+  "serving_size": "100.0g",
+  "calories": {
+    "consumed": 85,
+    "unit": "kcal",
+    "daily_value_pct": 4.2
+  },
+  "macros": {
+    "protein": {
+      "amount": 0.73,
+      "unit": "g",
+      "calories": 2.9,
+      "daily_value_pct": 1.5
+    },
+    "carbs": {
+      "amount": 20.1,
+      "unit": "g",
+      "calories": 80.4,
+      "daily_value_pct": 7.3
+    },
+    "fat": {
+      "amount": 0.22,
+      "unit": "g",
+      "calories": 2,
+      "daily_value_pct": 0.3
+    },
+    "fiber": {
+      "amount": 1.7,
+      "unit": "g",
+      "calories": 0,
+      "daily_value_pct": 6.1
+    }
+  },
+  "micros": {
+    "vitamins": {
+      "vitamin_a": {
+        "amount": 1,
+        "unit": "mcg",
+        "daily_value_pct": 0.1
+      },
+      "vitamin_c": {
+        "amount": 9.7,
+        "unit": "mg",
+        "daily_value_pct": 10.8
+      },
+      "vitamin_d": {
+        "amount": 0,
+        "unit": "g",
+        "daily_value_pct": 0
+      },
+      "vitamin_e": {
+        "amount": 0,
+        "unit": "g",
+        "daily_value_pct": 0
+      },
+      "vitamin_k": {
+        "amount": 0.2,
+        "unit": "mcg",
+        "daily_value_pct": 0.2
+      },
+      "vitamin_b12": {
+        "amount": 0,
+        "unit": "g",
+        "daily_value_pct": 0
+      },
+      "folate": {
+        "amount": 25,
+        "unit": "mcg",
+        "daily_value_pct": 6.2
+      }
+    },
+    "minerals": {
+      "calcium": {
+        "amount": 0,
+        "unit": "mg",
+        "daily_value_pct": 0
+      },
+      "iron": {
+        "amount": 0,
+        "unit": "mg",
+        "daily_value_pct": 0
+      },
+      "magnesium": {
+        "amount": 0,
+        "unit": "mg",
+        "daily_value_pct": 0
+      },
+      "potassium": {
+        "amount": 0,
+        "unit": "mg",
+        "daily_value_pct": 0
+      },
+      "zinc": {
+        "amount": 0,
+        "unit": "mg",
+        "daily_value_pct": 0
+      },
+      "sodium": {
+        "amount": 0,
+        "unit": "mg",
+        "daily_value_pct": 0
+      },
+      "phosphorus": {
+        "amount": 0,
+        "unit": "mg",
+        "daily_value_pct": 0
+      }
+    }
+  },
+  "meal_entry": {
+    "name": "Bananas, overripe, raw",
+    "time": "10:53 PM",
+    "calories": 85,
+    "macros": "0.73g P · 20.1g C · 0.22g F",
+    "items": [
+      {
+        "name": "Bananas, overripe, raw",
+        "amount": "100.0g",
+        "calories": 85
+      }
+    ]
+  }
+}
