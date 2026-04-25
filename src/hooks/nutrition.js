@@ -11,16 +11,14 @@ function isNutrientField(val) {
 
 function scaleNutrient(nutritionData, scale) {
   const scaledNutrients = {};
-  for (const nutrient in nutritionData) {
-    
-    let n = nutrient;
-    n = {
-      amount: Math.round(nutrient.amount * scale * 10) / 10,
+  for (const key in nutritionData) {
+    const nutrient = nutritionData[key];
+    scaledNutrients[key] = {
+      amount: Math.round((nutrient.amount ?? 0) * scale * 10) / 10,
       unit: nutrient.unit,
-      daily_value_pct: Math.round(nutrient.daily_value_pct * scale * 10) / 10,
+      daily_value_pct: Math.round((nutrient.daily_value_pct ?? 0) * scale * 10) / 10,
     };
   }
-  console.log("scaled nutrients:", scaledNutrients);
   return scaledNutrients;
 }
 
@@ -40,10 +38,10 @@ export function buildMealPayload(nutritionData, serving_size, consumptionDate) {
   const food = nutritionData.food ;
   const baseQty  = Number(nutritionData.quantity || nutritionData.serving_size) || 100;
   const scale = serving_size / baseQty;
-  console.log("scale:", scale);
+  console.log("nutritionData:", nutritionData);
   const payload = {
     food,
-    serving_size: new String(serving_size + "g"),
+    serving_size,
     consumptionDate: consumptionDate || new Date().toISOString(),
     calories: scaleCalories(nutritionData["calories"], serving_size, baseQty),
     macros: scaleNutrient(nutritionData["macros"], scale),
@@ -66,8 +64,7 @@ export async function fetchNutrition(foodItem, quantity = 100) {
 }
 
 export async function addItem(payload) {
-  // console.log("meal payload:", JSON.stringify(payload, null, 2));
-  return true;
+  console.log("meal payload:", JSON.stringify(payload, null, 2));
   const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/meals/add`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },

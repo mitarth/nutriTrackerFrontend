@@ -82,7 +82,7 @@ function FoodCard({ item }) {
         <div>
           <div style={{ fontSize: 13, fontWeight: 700, color: "#e2e8f0", textTransform: "capitalize" }}>{item.foodName || item.food_name || item.name || item.food || "Unknown"}</div>
           <div style={{ fontSize: 10, color: "#475569", marginTop: 2 }}>
-            {item.serving_size ?? item.serving}g · {formatTime(item.consumptionDate)}
+            {parseFloat(item.serving_size ?? item.serving)}g · {formatTime(item.consumptionDate)}
           </div>
         </div>
         <div style={{ textAlign: "right" }}>
